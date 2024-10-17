@@ -28,6 +28,7 @@ def mostrarCarrosCompleto(listaCarros):
 
 # Função que representa a escolha 1 do menu
 # O valor do carro é perguntado para o usuário 
+# Comentario teste do git
 def escolhaUm(listaCarros):
     mostrarCarrosCompleto(listaCarros)
     enunciado = "Qual veiculo sera vendido? "
