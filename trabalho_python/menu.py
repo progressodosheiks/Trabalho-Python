@@ -49,6 +49,7 @@ def escolhaTres():
     print("Carros comprados:")
     mostrarCarros(carrosComprados)
 
+# A sintaxe global é usado para usar a variavel global valorCarrosVendidos
 def escolhaQuatro():
     global valorCarrosVendidos
     print("Carros vendidos:")
@@ -90,8 +91,11 @@ def escolhaCinco():
     #mostra dados tabelados de forma simples
     print(df.to_string(index=False))
     #Cria gráfico
+    corCaixa = "green"
+    if valorCaixa < 0:
+        corCaixa = "red"
     plt.figure(figsize=(8, 5))
-    plt.bar(df['Descrição'], df['Valor'], color=['blue', 'orange', 'green'])
+    plt.bar(df['Descrição'], df['Valor'], color=['blue', 'orange', corCaixa])
     plt.title('Valores de Carros Vendidos, Comprados e Caixa')
     plt.ylabel('Valor')
     plt.grid(axis='y')
